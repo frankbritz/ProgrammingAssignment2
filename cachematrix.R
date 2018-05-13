@@ -1,5 +1,5 @@
 ## The two functions below show how R caches the inverse of a matrix,
-## instead of a possible recomputation which takes time and effort in a data scientist
+## instead of a possible recomputation which takes time and effort in a data scientist.
 
 ## Function below creates a special matrix that can cache its inverse. 
 
@@ -20,6 +20,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Function below computes the inverse of the special matrix returned by the makeCacheMatrix.
+## The output is the inverse of the matrix and checks if it has been stored in the cache
+## If the value has been cached, it returns the cached value.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'inv'
